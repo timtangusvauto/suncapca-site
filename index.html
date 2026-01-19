@@ -1,233 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>POINGO — Intelligent Golf Mobility Control</title>
-  <meta name="description" content="POINGO by California Suncap LLC builds intent-based control for intelligent golf mobility: smart follow push carts and remote-assisted golf carts." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POINGO™ | California Suncap LLC</title>
 
   <style>
-    :root{
-      --bg:#ffffff;
-      --section:#f7f9fb;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e2e8f0;
-      --accent:#0f766e;      /* deep green */
-      --accent-soft:#e6f3f1;
+    :root {
+      --green: #2f7d32;
+      --light-green: #eaf5ea;
+      --text-dark: #1f2933;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      background:var(--bg);
-      color:var(--text);
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text-dark);
+      background: #ffffff;
+      line-height: 1.6;
     }
 
-    a{color:var(--accent);text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-
-    header{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:18px 0;border-bottom:1px solid var(--line)
+    header {
+      background: var(--light-green);
+      padding: 60px 20px 40px;
+      text-align: center;
     }
 
-    .logo{
-      font-weight:800;
-      letter-spacing:.08em;
-      color:var(--accent);
+    header h1 {
+      font-size: 64px;
+      margin: 0;
+      color: var(--green);
+      letter-spacing: 2px;
     }
 
-    nav{display:flex;gap:20px}
-    nav a{color:var(--muted);font-size:14px}
-    nav a:hover{color:var(--accent)}
-
-    .hero{padding:72px 0 48px}
-
-    .pill{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      background:var(--accent-soft);
-      color:var(--accent);
-      font-size:13px;
-      font-weight:500;
+    header h1 span {
+      font-size: 24px;
+      vertical-align: super;
     }
 
-    h1{
-      font-size:44px;
-      line-height:1.1;
-      margin:18px 0 16px;
+    header p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 20px auto 0;
     }
 
-    .sub{
-      max-width:900px;
-      font-size:16px;
-      line-height:1.65;
-      color:var(--muted);
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    .cta{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap}
-    .btn{
-      padding:12px 16px;
-      border-radius:10px;
-      border:1px solid var(--accent);
-      font-size:14px;
-    }
-    .btn.primary{
-      background:var(--accent);
-      color:#fff;
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
 
-    section{padding:64px 0}
-    section.alt{background:var(--section)}
-    h2{font-size:26px;margin-bottom:16px}
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:16px;
-      margin-top:24px;
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
     }
 
-    .card{
-      grid-column:span 4;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:18px;
+    .hero-text h2 {
+      color: var(--green);
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    .card h3{margin:0 0 8px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-
-    .two{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:24px;
-      margin-top:24px;
+    .hero-text p {
+      font-size: 18px;
     }
 
-    ul{padding-left:18px;color:var(--muted);line-height:1.8}
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:28px 0;
-      font-size:13px;
-      color:var(--muted);
+    footer {
+      background: #f3f4f6;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #555;
     }
 
-    @media(max-width:900px){
-      h1{font-size:34px}
-      .card{grid-column:span 12}
-      .two{grid-template-columns:1fr}
-      nav{display:none}
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
     }
   </style>
 </head>
 
 <body>
-<div class="wrap">
 
 <header>
-  <div class="logo">POINGO</div>
-  <nav>
-    <a href="#what">What</a>
-    <a href="#tech">Technology</a>
-    <a href="#use">Use Cases</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>POINGO<span>™</span></h1>
+  <p>
+    Intelligent mobility and intent-based control for the next generation of golf experiences.
+  </p>
 </header>
 
 <section class="hero">
-  <span class="pill">Intent-Based Control for Golf Mobility</span>
-  <h1>Intelligent Control for<br/>Golf Course Mobility</h1>
-  <p class="sub">
-    POINGO, developed by California Suncap LLC, is building intent-based control systems
-    for intelligent golf mobility — including smart follow push carts and remote-assisted
-    golf carts — designed for low-speed, rule-based, controlled environments.
-  </p>
-  <div class="cta">
-    <a class="btn primary" href="#contact">Pilot / Partnership Inquiry</a>
-    <a class="btn" href="#what">Learn More</a>
+  <div class="hero-text">
+    <h2>Walk Freely. Let the Cart Follow.</h2>
+    <p>
+      POINGO is developing intelligent golf mobility systems that allow players to walk naturally,
+      while smart carts and bag carriers follow seamlessly and safely.
+    </p>
   </div>
+  <img src="assets/hero-walk.jpg" alt="Golfers walking with intelligent golf cart">
 </section>
 
-<section id="what" class="alt">
-  <h2>What We’re Building</h2>
-  <div class="two">
-    <div>
-      <p class="sub">
-        POINGO focuses on two complementary product directions that share a unified
-        intent-based control architecture:
-      </p>
-      <ul>
-        <li><b>Smart Follow Push Cart</b> — supports walking rounds with minimal input.</li>
-        <li><b>Remote-Assisted Golf Cart</b> — intuitive pointing and confirmation-based assisted driving.</li>
-      </ul>
-      <p class="sub">
-        Both products interpret user intent from minimal discrete inputs and pointing/orientation data,
-        then translate that intent into safe, constrained platform commands.
-      </p>
-    </div>
-    <div>
-      <ul>
-        <li>Minimal, learnable handheld interface</li>
-        <li>Wireless command and status exchange</li>
-        <li>Safety-first constraints and stop rules</li>
-        <li>Designed for golf-course operations</li>
-      </ul>
-    </div>
+<section class="hero">
+  <img src="assets/hero-point.jpg" alt="Pointing-based control of golf cart">
+  <div class="hero-text">
+    <h2>Minimal Input. Maximum Intent.</h2>
+    <p>
+      Using simple gestures and pointing orientation, POINGO enables intuitive control of
+      autonomous and semi-autonomous golf carts without complex interfaces.
+    </p>
   </div>
-</section>
-
-<section id="tech">
-  <h2>Technology Overview</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Minimal Input</h3>
-      <p>One or few discrete inputs combined with confirmation actions.</p>
-    </div>
-    <div class="card">
-      <h3>Pointing & Orientation</h3>
-      <p>Directional intent inferred from orientation sensing.</p>
-    </div>
-    <div class="card">
-      <h3>Safety Layer</h3>
-      <p>Speed limits, stop rules, and controlled-environment constraints.</p>
-    </div>
-  </div>
-</section>
-
-<section id="roadmap" class="alt">
-  <h2>Roadmap</h2>
-  <div class="grid">
-    <div class="card"><h3>Prototype</h3><p>Core control logic and handheld interface.</p></div>
-    <div class="card"><h3>Pilot</h3><p>Golf-course trials and operational validation.</p></div>
-    <div class="card"><h3>Scale</h3><p>Repeatable deployments and partner integrations.</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p class="sub">
-    For partnerships, pilot venues, or technical collaboration:
-  </p>
-  <p>
-    <a href="mailto:sales@suncapca.com">sales@suncapca.com</a><br/>
-    Los Angeles, CA
-  </p>
 </section>
 
 <footer>
-  © <span id="y"></span> POINGO — California Suncap LLC. All rights reserved.<br/>
-  POINGO™ is a trademark of California Suncap LLC.
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  © 2026 California Suncap LLC · Los Angeles ·
+  <a href="mailto:sales@suncapca.com">sales@suncapca.com</a>
 </footer>
 
-</div>
 </body>
 </html>
