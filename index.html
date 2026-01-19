@@ -1,419 +1,247 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POINGO | California Suncap LLC</title>
-  <meta name="description" content="POINGO by California Suncap LLC. Future-ready autonomy for golf: intelligent caddie push carts and intention-based remote driving for golf carts." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>POINGO — Intelligent Golf Mobility Control</title>
+  <meta name="description" content="POINGO by California Suncap LLC builds intent-based control for intelligent golf mobility: smart follow push carts and remote-assisted golf carts." />
+
   <style>
     :root{
       --bg:#ffffff;
+      --section:#f7f9fb;
+      --card:#ffffff;
       --text:#0f172a;
       --muted:#475569;
-      --border:#e2e8f0;
-      --card:#f8fafc;
-      --accent:#2563eb;
-      --accent2:#16a34a;
-      --shadow: 0 10px 30px rgba(2,6,23,.08);
-      --radius:18px;
+      --line:#e2e8f0;
+      --accent:#0f766e;      /* deep green */
+      --accent-soft:#e6f3f1;
     }
-    *{box-sizing:border-box;}
+
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
       background:var(--bg);
       color:var(--text);
-      line-height:1.55;
     }
-    a{color:inherit; text-decoration:none;}
-    .container{max-width:1100px; margin:0 auto; padding:0 20px;}
-    .nav{
-      position:sticky; top:0; z-index:50;
-      background:rgba(255,255,255,.75);
-      backdrop-filter:saturate(180%) blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      height:68px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:800; letter-spacing:.2px;
-    }
-    .logo{
-      width:36px; height:36px; border-radius:10px;
-      background: radial-gradient(120% 120% at 30% 20%, #60a5fa 0%, #2563eb 45%, #1e40af 100%);
-      box-shadow: 0 10px 20px rgba(37,99,235,.25);
-    }
-    .nav-links{
-      display:flex; gap:18px; color:var(--muted); font-weight:600; font-size:14px;
-    }
-    .nav-links a{padding:8px 10px; border-radius:10px;}
-    .nav-links a:hover{background:#f1f5f9; color:var(--text);}
 
-    /* HERO */
-    .hero{padding:34px 0 0;}
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:26px;
-      align-items:stretch;
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:18px 0;border-bottom:1px solid var(--line)
     }
-    @media (max-width: 900px){
-      .hero-grid{grid-template-columns:1fr; }
-    }
-    .hero-copy{
-      padding:18px 0;
-    }
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-size:13px; font-weight:700; color:#0b2a6f;
-      background:#eff6ff; border:1px solid #dbeafe;
-      padding:8px 12px; border-radius:999px;
-    }
-    .kicker .dot{
-      width:8px; height:8px; border-radius:999px; background:var(--accent);
-      box-shadow:0 0 0 4px rgba(37,99,235,.12);
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size:46px;
-      line-height:1.08;
-      letter-spacing:-.6px;
-    }
-    @media (max-width: 900px){
-      h1{font-size:38px;}
-    }
-    .subtitle{
-      margin:0 0 18px;
-      color:var(--muted);
-      font-size:16px;
-      max-width:55ch;
-    }
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      border-radius:12px;
-      padding:12px 14px;
+
+    .logo{
       font-weight:800;
+      font-size:28px;
+      letter-spacing:.1em;
+      color:var(--accent);
+    }
+
+    .tm{
+      font-size:12px;
+      vertical-align:super;
+      margin-left:2px;
+      font-weight:600;
+    }
+
+    nav{display:flex;gap:20px}
+    nav a{color:var(--muted);font-size:14px}
+    nav a:hover{color:var(--accent)}
+
+    .hero{padding:72px 0 48px}
+
+    .pill{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      color:var(--accent);
+      font-size:13px;
+      font-weight:500;
+    }
+
+    h1{
+      font-size:44px;
+      line-height:1.1;
+      margin:18px 0 16px;
+    }
+
+    .sub{
+      max-width:900px;
+      font-size:16px;
+      line-height:1.65;
+      color:var(--muted);
+    }
+
+    .cta{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      padding:12px 16px;
+      border-radius:10px;
+      border:1px solid var(--accent);
       font-size:14px;
-      border:1px solid var(--border);
-      background:white;
-      box-shadow: 0 8px 20px rgba(2,6,23,.06);
     }
     .btn.primary{
       background:var(--accent);
-      border-color:rgba(37,99,235,.35);
-      color:white;
-      box-shadow: 0 14px 30px rgba(37,99,235,.22);
-    }
-    .btn:hover{transform:translateY(-1px);}
-    .fine{
-      margin-top:10px;
-      color:#64748b;
-      font-size:12.5px;
+      color:#fff;
     }
 
-    .hero-media{
-      border-radius:var(--radius);
-      overflow:hidden;
-      border:1px solid var(--border);
-      box-shadow: var(--shadow);
-      background:#0b1220;
-      position:relative;
-      min-height:360px;
-    }
-    .hero-media img{
-      width:100%; height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.02);
-    }
-    .hero-overlay{
-      position:absolute; inset:auto 14px 14px 14px;
-      background:rgba(255,255,255,.88);
-      border:1px solid rgba(226,232,240,.9);
-      border-radius:14px;
-      padding:12px 12px;
-    }
-    .hero-overlay .t{
-      font-weight:900; font-size:13px;
-      margin:0 0 4px;
-    }
-    .hero-overlay .d{
-      margin:0; font-size:12.5px; color:var(--muted);
-    }
+    section{padding:64px 0}
+    section.alt{background:var(--section)}
+    h2{font-size:26px;margin-bottom:16px}
 
-    /* SECTIONS */
-    section{padding:60px 0;}
-    .section-title{
-      display:flex; justify-content:space-between; align-items:flex-end; gap:18px;
-      margin-bottom:18px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size:26px;
-      letter-spacing:-.2px;
-    }
-    .section-title p{
-      margin:0;
-      color:var(--muted);
-      max-width:60ch;
-      font-size:14.5px;
-    }
-    .cards{
+    .grid{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:repeat(12,1fr);
       gap:16px;
+      margin-top:24px;
     }
-    @media (max-width: 900px){
-      .cards{grid-template-columns:1fr;}
-    }
+
     .card{
+      grid-column:span 4;
       background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
+      border:1px solid var(--line);
+      border-radius:14px;
       padding:18px;
-      box-shadow: 0 10px 26px rgba(2,6,23,.05);
     }
-    .card .label{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:12.5px; font-weight:800; color:#0f172a;
-      background:#fff;
-      border:1px solid var(--border);
-      padding:6px 10px;
-      border-radius:999px;
-    }
-    .pill{
-      width:8px; height:8px; border-radius:999px;
-      background:var(--accent2);
-      box-shadow:0 0 0 4px rgba(22,163,74,.10);
-    }
-    .card h3{margin:12px 0 6px; font-size:16px;}
-    .card p{margin:0; color:var(--muted); font-size:14px;}
 
-    /* FEATURE BLOCK with Image 2 */
-    .feature{
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+
+    .two{
       display:grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap:18px;
-      align-items:stretch;
-      margin-top:18px;
-    }
-    @media (max-width: 900px){
-      .feature{grid-template-columns:1fr;}
-    }
-    .feature-text{
-      background:linear-gradient(180deg,#ffffff 0%, #f8fafc 100%);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow: var(--shadow);
-    }
-    .feature-text ul{
-      margin:12px 0 0; padding:0 0 0 18px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .feature-media{
-      border-radius:var(--radius);
-      overflow:hidden;
-      border:1px solid var(--border);
-      box-shadow: var(--shadow);
-      background:#ffffff;
-    }
-    .feature-media img{
-      width:100%; height:100%;
-      object-fit:cover; display:block;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      margin-top:24px;
     }
 
-    /* FOOTER */
+    ul{padding-left:18px;color:var(--muted);line-height:1.8}
+
     footer{
-      padding:36px 0 46px;
-      border-top:1px solid var(--border);
-      background:#ffffff;
-    }
-    .footer-grid{
-      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      font-size:13px;
       color:var(--muted);
-      font-size:13.5px;
     }
-    .badge{
-      display:inline-flex; align-items:center; gap:10px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      padding:8px 12px;
-      background:#fff;
-      box-shadow: 0 8px 20px rgba(2,6,23,.05);
-      color:#0f172a;
-      font-weight:800;
+
+    @media(max-width:900px){
+      h1{font-size:34px}
+      .card{grid-column:span 12}
+      .two{grid-template-columns:1fr}
+      nav{display:none}
     }
-    .badge small{color:var(--muted); font-weight:700;}
   </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <div class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div style="font-size:14px;">POINGO</div>
-          <div style="font-size:12px; color:#64748b; font-weight:700;">California Suncap LLC</div>
-        </div>
-      </div>
-      <div class="nav-links">
-        <a href="#focus">Focus</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
-      </div>
+<div class="wrap">
+
+<header>
+  <div class="logo">POINGO<span class="tm">®</span></div>
+  <nav>
+    <a href="#what">What</a>
+    <a href="#tech">Technology</a>
+    <a href="#use">Use Cases</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="pill">Intent-Based Control for Golf Mobility</span>
+  <h1>Intelligent Control for<br/>Golf Course Mobility</h1>
+  <p class="sub">
+    POINGO, developed by California Suncap LLC, is building intent-based control systems
+    for intelligent golf mobility — including smart follow push carts and remote-assisted
+    golf carts — designed for low-speed, rule-based, controlled environments.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#contact">Pilot / Partnership Inquiry</a>
+    <a class="btn" href="#what">Learn More</a>
+  </div>
+</section>
+
+<section id="what" class="alt">
+  <h2>What We’re Building</h2>
+  <div class="two">
+    <div>
+      <p class="sub">
+        POINGO focuses on two complementary product directions that share a unified
+        intent-based control architecture:
+      </p>
+      <ul>
+        <li><b>Smart Follow Push Cart</b> — supports walking rounds with minimal input.</li>
+        <li><b>Remote-Assisted Golf Cart</b> — intuitive pointing and confirmation-based assisted driving.</li>
+      </ul>
+      <p class="sub">
+        Both products interpret user intent from minimal discrete inputs and pointing/orientation data,
+        then translate that intent into safe, constrained platform commands.
+      </p>
+    </div>
+    <div>
+      <ul>
+        <li>Minimal, learnable handheld interface</li>
+        <li>Wireless command and status exchange</li>
+        <li>Safety-first constraints and stop rules</li>
+        <li>Designed for golf-course operations</li>
+      </ul>
     </div>
   </div>
+</section>
 
-  <!-- HERO (Image 1) -->
-  <div class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="kicker"><span class="dot"></span> Building the next layer of golf mobility</div>
-          <h1>Intention-driven control for golf movement.</h1>
-          <p class="subtitle">
-            POINGO focuses on the future of golf-course mobility: an intelligent caddie push cart and
-            a smart remote driving system for golf carts—designed to feel natural, safe, and simple.
-          </p>
+<section id="tech">
+  <h2>Technology Overview</h2>
 
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:sales@suncapca.com">Contact: sales@suncapca.com</a>
-            <a class="btn" href="#approach">See our approach</a>
-          </div>
-
-          <div class="fine">
-            Location: Los Angeles · Brand: POINGO · Company: California Suncap LLC
-          </div>
-        </div>
-
-        <div class="hero-media">
-          <img src="assets/ai-follow-hero.jpg" alt="Two golfers walking while a golf cart follows behind on a fairway" />
-          <div class="hero-overlay">
-            <p class="t">A calm, human-first experience</p>
-            <p class="d">Assistive autonomy that complements walking—without adding complexity for the golfer.</p>
-          </div>
-        </div>
-      </div>
+  <!-- NEW: technology visuals -->
+  <div class="two">
+    <img src="assets/ai-follow-hero.jpg" alt="Intent-based follow control" style="width:100%;border-radius:16px;border:1px solid var(--line);" />
+    <img src="assets/ai-follow-control.jpg" alt="Handheld pointing control" style="width:100%;border-radius:16px;border:1px solid var(--line);" />
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Minimal Input</h3>
+      <p>One or few discrete inputs combined with confirmation actions.</p>
+    </div>
+    <div class="card">
+      <h3>Pointing & Orientation</h3>
+      <p>Directional intent inferred from orientation sensing.</p>
+    </div>
+    <div class="card">
+      <h3>Safety Layer</h3>
+      <p>Speed limits, stop rules, and controlled-environment constraints.</p>
     </div>
   </div>
+</section>
 
-  <!-- FOCUS -->
-  <section id="focus">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>What we are building</h2>
-          <p>Two product directions that share one principle: minimal input, maximum clarity.</p>
-        </div>
-      </div>
+<section id="roadmap" class="alt">
+  <h2>Roadmap</h2>
+  <div class="grid">
+    <div class="card"><h3>Prototype</h3><p>Core control logic and handheld interface.</p></div>
+    <div class="card"><h3>Pilot</h3><p>Golf-course trials and operational validation.</p></div>
+    <div class="card"><h3>Scale</h3><p>Repeatable deployments and partner integrations.</p></div>
+  </div>
+</section>
 
-      <div class="cards">
-        <div class="card">
-          <span class="label"><span class="pill"></span> Intelligent Caddie Push Cart</span>
-          <h3>Smart assist that keeps pace with the player</h3>
-          <p>
-            A next-generation push cart designed for real golf-course conditions, with a clean user experience
-            and a focus on reliability and safety.
-          </p>
-        </div>
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="sub">
+    For partnerships, pilot venues, or technical collaboration:
+  </p>
+  <p>
+    <a href="mailto:sales@suncapca.com">sales@suncapca.com</a><br/>
+    Los Angeles, CA
+  </p>
+</section>
 
-        <div class="card">
-          <span class="label"><span class="pill"></span> Smart Remote Driving Golf Cart</span>
-          <h3>Remote driving that feels natural</h3>
-          <p>
-            Intention-based control for low-speed golf mobility, enabling controlled movement while staying aligned
-            with course rules and safety constraints.
-          </p>
-        </div>
+<footer>
+  © <span id="y"></span> POINGO — California Suncap LLC. All rights reserved.<br/>
+  POINGO® is a registered trademark of California Suncap LLC.
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</footer>
 
-        <div class="card">
-          <span class="label"><span class="pill"></span> Platform Readiness</span>
-          <h3>Designed to scale into mapping and autonomy</h3>
-          <p>
-            The system is structured for future upgrades—mapping, route planning, and richer automation—while keeping
-            the current experience simple.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPROACH (Image 2) -->
-  <section id="approach" style="padding-top:10px;">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>How POINGO thinks about control</h2>
-          <p>
-            We prioritize a minimal, learnable interaction model—so control stays intuitive even as capability grows.
-          </p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-text">
-          <div class="badge">Core concept <small>minimal discrete input + pointing intention</small></div>
-          <p style="margin:14px 0 0; color:#475569;">
-            The interaction model is built around the simplest possible inputs paired with orientation/pointing intent,
-            enabling clear user confirmation and predictable motion behaviors.
-          </p>
-          <ul>
-            <li>Minimal buttons (or minimal discrete input events)</li>
-            <li>Orientation/pointing as the intent channel</li>
-            <li>Confirmation steps to reduce accidental commands</li>
-            <li>Modes that remain easy to learn and remember</li>
-          </ul>
-          <p style="margin:14px 0 0; color:#64748b; font-size:13.5px;">
-            This page is an early public overview. Detailed implementation and technical work are under active development.
-          </p>
-        </div>
-
-        <div class="feature-media">
-          <img src="assets/ai-follow-control.jpg" alt="Two golfers discussing direction with a golf cart nearby" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <div>
-          <h2>Contact</h2>
-          <p>Partnerships, pilots, and collaboration inquiries.</p>
-        </div>
-      </div>
-
-      <div class="card" style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
-        <div>
-          <div style="font-weight:900; font-size:16px;">California Suncap LLC</div>
-          <div style="color:#64748b; font-size:14px;">Los Angeles · POINGO</div>
-          <div style="margin-top:6px; color:#0f172a; font-weight:800;">sales@suncapca.com</div>
-        </div>
-        <a class="btn primary" href="mailto:sales@suncapca.com">Email us</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>© <span id="y"></span> California Suncap LLC. All rights reserved.</div>
-      <div>POINGO is a brand name used for product and platform identity.</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+</div>
 </body>
 </html>
