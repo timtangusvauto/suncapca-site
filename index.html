@@ -16,8 +16,6 @@
       --line:#e2e8f0;
       --accent:#0f766e;
       --accent-soft:#e6f3f1;
-      --good:#16a34a;
-      --warn:#f59e0b;
     }
 
     *{box-sizing:border-box}
@@ -122,7 +120,7 @@
 
     ul{padding-left:18px;color:var(--muted);line-height:1.8}
 
-    /* Comparison table (same visual language: soft borders, rounded corners) */
+    /* Comparison table — same visual language: soft borders, rounded corners */
     .tableWrap{
       margin-top:18px;
       border:1px solid var(--line);
@@ -153,6 +151,8 @@
     }
     tbody tr:last-child td{border-bottom:none}
 
+    .strong{color:var(--text);font-weight:800}
+    .mutedSmall{font-size:13px;color:var(--muted)}
     .tag{
       display:inline-block;
       padding:3px 10px;
@@ -163,31 +163,6 @@
       font-size:12px;
       margin-bottom:8px;
     }
-    .strong{color:var(--text);font-weight:800}
-    .mutedSmall{font-size:13px;color:var(--muted)}
-    .bullet{
-      margin:8px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:13.5px;
-    }
-
-    .mark{
-      display:inline-block;
-      padding:2px 8px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      font-weight:700;
-      font-size:12px;
-      color:var(--text);
-      background:#fff;
-      margin-right:6px;
-      margin-bottom:6px;
-      white-space:nowrap;
-    }
-    .mark.good{border-color:rgba(22,163,74,.25); background:rgba(22,163,74,.08); color:var(--good)}
-    .mark.warn{border-color:rgba(245,158,11,.25); background:rgba(245,158,11,.10); color:var(--warn)}
 
     footer{
       border-top:1px solid var(--line);
@@ -219,7 +194,6 @@
     <a href="#what">What</a>
     <a href="#tech">Technology</a>
     <a href="#compare">Comparison</a>
-    <a href="#use">Use Cases</a>
     <a href="#roadmap">Roadmap</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -235,11 +209,11 @@
 
   <p class="sub">
     POINGO is a patent-pending, intent-based control system developed by California Suncap LLC.
-    It changes how golfers interact with golf mobility devices — from button-driven operation
+    It changes how golfers interact with mobility devices — from button-driven operation
     to expressing intent through pointing and confirmation.
     <br/><br/>
     Golfers point to express direction or behavior intent, then confirm to authorize execution.
-    From there, the system handles motion details — including stability, speed, obstacle awareness,
+    The system handles motion details — stability, speed control, obstacle awareness,
     and terrain-appropriate behavior — on real golf courses with slopes, paths, and uneven ground.
   </p>
 
@@ -263,21 +237,20 @@
         for golf-course environments — from walking push carts to low-speed golf carts.
       </p>
       <ul>
-        <li><b>Smart Follow Push Cart</b> — decision-aware following that adapts to terrain, obstacles, and course behavior.</li>
-        <li><b>Intent-Based Manual &amp; Terrain-Aware Golf Cart</b> — assisted manual control with system-managed stability and safety.</li>
+        <li><b>Smart Follow Push Cart</b> — follow that adapts to terrain, obstacles, and course behavior.</li>
+        <li><b>Terrain-Aware Golf Cart</b> — assisted manual control with stable, predictable behavior on slopes.</li>
       </ul>
       <p class="sub">
         The same core system interprets user intent through pointing and confirmation,
-        then translates that intent into smooth, constrained, and context-aware vehicle behavior
-        across different modes.
+        then translates that intent into smooth, constrained, and context-aware vehicle behavior.
       </p>
     </div>
     <div>
       <ul>
-        <li>Minimal, learnable handheld interaction</li>
         <li>Point to express intent, confirm to authorize action</li>
-        <li>Assisted manual control (system-managed stability &amp; safety)</li>
-        <li>Decision-aware smart follow (terrain + obstacles + course behavior)</li>
+        <li>Assisted manual control (less micro-steering)</li>
+        <li>Decision-aware follow (calmer behavior in complex areas)</li>
+        <li>Built for real courses: slopes, paths, crossings</li>
       </ul>
     </div>
   </div>
@@ -293,170 +266,110 @@
   <div class="grid">
     <div class="card">
       <h3>Point &amp; Confirm Interaction</h3>
-      <p>Intent is expressed through natural pointing, then authorized through context-dependent confirmation.</p>
+      <p>Pointing expresses intent. A context-dependent confirmation authorizes execution.</p>
     </div>
     <div class="card">
       <h3>Assisted Manual Control</h3>
-      <p>Even in manual mode, the system manages stability, speed, and basic obstacle awareness to reduce user burden.</p>
+      <p>The system manages stability and speed so users don’t have to micro-steer.</p>
     </div>
     <div class="card">
-      <h3>Course-Aware Decision Layer</h3>
-      <p>Movement decisions are informed by terrain profiles, obstacles, and golf-course behavior rules.</p>
+      <h3>Decision-Aware Follow</h3>
+      <p>Following adapts to terrain, obstacles, and course-appropriate behavior rules.</p>
     </div>
   </div>
 </section>
 
-<!-- UPDATED: Market comparison (bag push carts + follow systems) -->
 <section id="compare" class="alt">
-  <h2>How POINGO Compares</h2>
+  <h2>Market Comparison (Simple &amp; Clear)</h2>
   <p class="sub">
-    The market already has strong products — button remotes, UWB follow, vision follow, and GPS-based approaches.
-    POINGO’s advantage comes from a layered control-and-decision stack that consistently reduces user burden and improves predictability on real courses.
+    The market already offers strong products. The key difference is how control responsibility is shared:
+    button systems make golfers drive, tracking systems make golfers worry, and POINGO makes the system carry more of the burden.
   </p>
 
   <div class="tableWrap">
-    <table aria-label="POINGO comparison table">
+    <table aria-label="Simple market comparison table">
       <thead>
         <tr>
-          <th style="width:26%;">Capability Layer</th>
+          <th style="width:24%;">What Matters</th>
           <th style="width:25%;">Button Remote Push Carts</th>
-          <th style="width:25%;">Typical Follow Systems (UWB / Vision / GPS)</th>
-          <th style="width:24%;">POINGO™ (Point &amp; Confirm Stack)</th>
+          <th style="width:25%;">Typical Follow (UWB / Vision / GPS)</th>
+          <th style="width:26%;">POINGO™</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <div class="tag">Layer 1</div><br/>
-            <span class="strong">Human Interaction</span><br/>
-            <span class="mutedSmall">How the golfer communicates intent</span>
+            <div class="tag">Control</div><br/>
+            <span class="strong">How you tell it what to do</span>
           </td>
           <td>
-            <span class="mark warn">Button memory</span>
-            <span class="mark warn">Mode switching</span><br/>
-            User steers by buttons; frequent micro-adjustments are common.
+            Buttons and modes.<br/>
+            <span class="mutedSmall">Users often steer and adjust continuously.</span>
           </td>
           <td>
-            <span class="mark warn">System guesses</span>
-            <span class="mark warn">Unclear boundary</span><br/>
-            Following is continuous; golfer often feels uncertain when conditions change.
+            Auto tracking.<br/>
+            <span class="mutedSmall">Can feel unclear in edge cases.</span>
           </td>
           <td>
-            <span class="mark good">Point to express intent</span>
-            <span class="mark good">Confirm to authorize</span><br/>
-            Clear responsibility boundary: intent → authorization → execution (confirmation gesture varies by state).
+            <span class="strong">Point &amp; confirm.</span><br/>
+            <span class="mutedSmall">Intent is clear, execution is authorized.</span>
           </td>
         </tr>
 
         <tr>
           <td>
-            <div class="tag">Layer 2</div><br/>
-            <span class="strong">Manual Mode Quality</span><br/>
-            <span class="mutedSmall">What “manual control” really feels like</span>
+            <div class="tag">Manual Mode</div><br/>
+            <span class="strong">How stable “manual” feels</span>
           </td>
           <td>
-            <span class="mark warn">User carries burden</span><br/>
-            User manages direction, speed feel, attention, and corrections.
+            User carries the burden (micro-steering).<br/>
+            <span class="mutedSmall">More attention required.</span>
           </td>
           <td>
-            <span class="mark warn">Not designed for manual</span><br/>
-            Many follow systems degrade when forced into manual / mixed scenarios.
+            Often not designed for mixed manual use.<br/>
+            <span class="mutedSmall">Behavior can vary by conditions.</span>
           </td>
           <td>
-            <span class="mark good">Assisted manual control</span><br/>
-            Golfer indicates intent; the system manages stability, speed limits, smooth motion, and basic obstacle awareness.
-            <ul class="bullet">
-              <li>Less micromanagement</li>
-              <li>Less attention required</li>
-            </ul>
+            <span class="strong">Assisted manual control.</span><br/>
+            <span class="mutedSmall">System manages stability and speed on slopes.</span>
           </td>
         </tr>
 
         <tr>
           <td>
-            <div class="tag">Layer 3</div><br/>
-            <span class="strong">Follow Behavior</span><br/>
-            <span class="mutedSmall">Tracking vs decision-making</span>
+            <div class="tag">Follow</div><br/>
+            <span class="strong">Tracking vs thinking</span>
           </td>
           <td>
-            <span class="mark warn">Not follow-native</span><br/>
-            If follow exists, it is often basic and can feel rigid in complex situations.
+            Limited follow or rigid behavior.<br/>
+            <span class="mutedSmall">Not optimized for complex areas.</span>
           </td>
           <td>
-            <span class="mark warn">Tracking-first</span><br/>
-            Keep distance and direction; performance can become inconsistent with crossings, obstacles, and terrain transitions.
+            Tracking-first.<br/>
+            <span class="mutedSmall">Performance can drop with obstacles/crossings.</span>
           </td>
           <td>
-            <span class="mark good">Decision-aware follow</span><br/>
-            Following is the outcome — the system evaluates terrain + obstacles + behavior constraints to choose safer motion.
-            <ul class="bullet">
-              <li>Calmer behavior in complex areas</li>
-              <li>Fewer “surprises”</li>
-            </ul>
+            <span class="strong">Decision-aware follow.</span><br/>
+            <span class="mutedSmall">Adapts path and speed for safer behavior.</span>
           </td>
         </tr>
 
         <tr>
           <td>
-            <div class="tag">Layer 4</div><br/>
-            <span class="strong">Course Awareness</span><br/>
-            <span class="mutedSmall">Terrain + behavior rules</span>
+            <div class="tag">Real Course</div><br/>
+            <span class="strong">Slopes, paths, crossings</span>
           </td>
           <td>
-            <span class="mark warn">Limited</span><br/>
-            Usually treats the course as flat ground; rule-driven behavior is minimal.
+            Basic terrain handling.<br/>
+            <span class="mutedSmall">Course rules are usually not part of control logic.</span>
           </td>
           <td>
-            <span class="mark warn">Variable</span><br/>
-            Sensors may detect a target, but course-specific behavior rules and terrain intent are often missing.
+            Variable terrain behavior.<br/>
+            <span class="mutedSmall">Often lacks rule-aware constraints.</span>
           </td>
           <td>
-            <span class="mark good">Terrain + behavior constraints</span><br/>
-            Built for real golf courses: slopes, paths, crossings, uneven ground — with course-appropriate movement constraints.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="tag">Layer 5</div><br/>
-            <span class="strong">User Burden</span><br/>
-            <span class="mutedSmall">Learning &amp; attention load</span>
-          </td>
-          <td>
-            <span class="mark warn">Learning required</span>
-            <span class="mark warn">Attention-heavy</span><br/>
-            Users often need to remember controls and keep monitoring the cart.
-          </td>
-          <td>
-            <span class="mark warn">Trust gap</span><br/>
-            Users may feel they must “watch it” due to unpredictable behavior in edge cases.
-          </td>
-          <td>
-            <span class="mark good">Low learning</span>
-            <span class="mark good">Low monitoring</span><br/>
-            Point &amp; confirm keeps control intuitive; decision layer reduces mental load during play.
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <div class="tag">Layer 6</div><br/>
-            <span class="strong">Where POINGO Goes Further</span><br/>
-            <span class="mutedSmall">Beyond what the market already does</span>
-          </td>
-          <td>
-            Feature improvements tend to stay at the control surface (more buttons, more modes, minor refinements).
-          </td>
-          <td>
-            Improvements are often sensor-driven (better tracking), but still lack a unified intent + rule-aware execution stack.
-          </td>
-          <td>
-            POINGO is a scalable platform:
-            <ul class="bullet">
-              <li>Same interaction (point &amp; confirm) across modes</li>
-              <li>Assisted manual control + decision-aware follow</li>
-              <li>Course-aware constraints for safer, calmer behavior</li>
-            </ul>
+            <span class="strong">Course-aware constraints.</span><br/>
+            <span class="mutedSmall">Built for slopes and real course geometry.</span>
           </td>
         </tr>
       </tbody>
@@ -465,16 +378,16 @@
 
   <div class="grid" style="margin-top:18px;">
     <div class="card">
-      <h3>Key Advantage</h3>
-      <p>Not one feature — a layered intent-and-decision stack that makes behavior more predictable in real course scenarios.</p>
+      <h3>What Golfers Feel</h3>
+      <p>Less learning, less monitoring, fewer surprises — a calmer, more predictable experience.</p>
     </div>
     <div class="card">
-      <h3>What Golfers Feel</h3>
-      <p>Less learning, less monitoring, fewer surprises — the cart behavior feels calmer and easier to trust.</p>
+      <h3>What Courses Prefer</h3>
+      <p>More consistent behavior on slopes and paths, with clearer control boundaries.</p>
     </div>
     <div class="card">
       <h3>What Partners Gain</h3>
-      <p>A unified control platform that can scale from push carts to low-speed golf carts while keeping the same user mental model.</p>
+      <p>A unified platform that scales from push carts to golf carts without changing the user mental model.</p>
     </div>
   </div>
 </section>
@@ -482,7 +395,7 @@
 <section id="roadmap" class="alt">
   <h2>Roadmap</h2>
   <div class="grid">
-    <div class="card"><h3>Prototype</h3><p>Validated intent-based interaction, assisted manual control, and course-aware behavior logic.</p></div>
+    <div class="card"><h3>Prototype</h3><p>Validated intent-based interaction and stable terrain-aware behavior on real courses.</p></div>
     <div class="card"><h3>Pilot</h3><p>Real-world course trials with push carts and golf carts across varied terrain and operating rules.</p></div>
     <div class="card"><h3>Scale</h3><p>OEM integration and repeatable partner deployments with a unified control platform.</p></div>
   </div>
