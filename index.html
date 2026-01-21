@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>POINGO — Natural Intent Control for Golf Mobility</title>
-  <meta name="description" content="POINGO by California Suncap LLC delivers point-and-confirm intent control for golf mobility — calmer manual control, smarter course behavior, and a clear path to premium tiers." />
+  <meta name="description" content="POINGO delivers point-and-confirm intent control for golf mobility, enabling calmer manual control and smarter course-aware behavior on real golf courses." />
 
   <style>
     :root{
@@ -120,7 +120,6 @@
 
     ul{padding-left:18px;color:var(--muted);line-height:1.8}
 
-    /* Comparison table — same visual language */
     .tableWrap{
       margin-top:18px;
       border:1px solid var(--line);
@@ -139,7 +138,7 @@
       font-weight:800;
       padding:12px 14px;
       border-bottom:1px solid var(--line);
-      background:linear-gradient(to bottom, #ffffff, #fbfcfd);
+      background:#fafafa;
       color:var(--text);
     }
     tbody td{
@@ -151,8 +150,6 @@
     }
     tbody tr:last-child td{border-bottom:none}
 
-    .strong{color:var(--text);font-weight:800}
-    .mutedSmall{font-size:13px;color:var(--muted)}
     .tag{
       display:inline-block;
       padding:3px 10px;
@@ -162,13 +159,6 @@
       font-weight:700;
       font-size:12px;
       margin-bottom:8px;
-    }
-    .bul{
-      margin:6px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-      line-height:1.65;
-      font-size:13.5px;
     }
 
     footer{
@@ -186,7 +176,6 @@
 
       thead{display:none}
       table, tbody, tr, td{display:block;width:100%}
-      tbody td{border-bottom:1px solid var(--line)}
       tbody tr{border-bottom:10px solid transparent}
     }
   </style>
@@ -207,7 +196,7 @@
 </header>
 
 <section class="hero">
-  <span class="pill">Point. Confirm. Done.</span>
+  <span class="pill">Point. Confirm. Let the system handle the rest.</span>
 
   <h1>
     Natural Control for<br/>
@@ -215,17 +204,16 @@
   </h1>
 
   <p class="sub">
-    Before anything else, this is what POINGO is <span class="strong">not</span>:
-    we’re not trying to build carts, and we’re not trying to replace what great manufacturers already do well.
+    Golf courses are not simple environments.
+    There are paths, slopes, crossings, and clear expectations about where and how a cart should move.
     <br/><br/>
-    We focus on one thing — how people naturally tell a walking cart (or a low-speed golf cart) what to do,
-    on a real golf course.
-    Golf courses aren’t simple environments: paths, slopes, crossings, areas you shouldn’t enter, and speed expectations.
-    So “follow” isn’t just tracking a person — it’s about respecting the course.
+    POINGO focuses on one simple idea:
+    people should be able to tell a cart what they want in a natural way,
+    and the system should take responsibility for executing that intent appropriately on the course.
     <br/><br/>
-    That’s why POINGO uses a simple flow:
-    <span class="strong">point to express intent</span>, then <span class="strong">confirm to authorize action</span>.
-    The system handles the details — stability, speed control, and safer behavior on slopes and uneven ground.
+    Users point to express intent, then confirm to authorize action.
+    From there, the system manages motion details such as stability, speed, and course-aware behavior,
+    resulting in calmer and more predictable movement during play.
   </p>
 
   <div class="cta">
@@ -235,7 +223,7 @@
 
   <div class="two" style="margin-top:28px;">
     <img src="assets/ai-follow-pushcart.jpg" alt="Smart follow push cart" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid var(--line);" />
-    <img src="assets/ai-follow-hero.jpg" alt="Natural terrain-aware control" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid var(--line);" />
+    <img src="assets/ai-follow-hero.jpg" alt="Course-aware control" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid var(--line);" />
   </div>
 </section>
 
@@ -244,24 +232,24 @@
   <div class="two">
     <div>
       <p class="sub">
-        We don’t see “follow” as a feature.
-        To us, follow is just one outcome of a system that understands the course and the situation.
+        POINGO is building a unified control system for golf mobility,
+        designed around how people naturally interact with carts on real courses.
       </p>
       <ul>
-        <li><b>When a user steps in</b> — control stays natural: <span class="strong">point, confirm, done</span>. No continuous steering. No babysitting.</li>
-        <li><b>When the cart is following</b> — the system decides path, speed, and how to avoid things based on the course — not the user.</li>
+        <li><b>When users step in</b>, control is simple and direct: point, confirm, done.</li>
+        <li><b>When the cart operates on its own</b>, the system decides how to move in a way that fits the course.</li>
       </ul>
       <p class="sub">
-        This same control philosophy can power both walking push carts and low-speed golf carts,
-        while keeping behavior calmer and more predictable in real terrain.
+        The same control logic applies to walking push carts and low-speed golf carts,
+        keeping behavior consistent across different products and use cases.
       </p>
     </div>
     <div>
       <ul>
-        <li>One simple control language across modes</li>
-        <li>Clear “intent → authorization → execution” boundary</li>
-        <li>Better behavior on slopes, paths, and crossings</li>
-        <li>Designed for golf-course expectations, not lab conditions</li>
+        <li>One consistent control language</li>
+        <li>Clear intent and authorization</li>
+        <li>Calmer behavior on slopes and paths</li>
+        <li>Designed for real course expectations</li>
       </ul>
     </div>
   </div>
@@ -270,188 +258,80 @@
 <section id="tech">
   <h2>Technology Overview</h2>
 
-  <div style="margin-top:24px;">
-    <img src="assets/ai-follow-control.jpg" alt="Natural pointing and intent-based control" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid var(--line);" />
-  </div>
-
   <div class="grid">
     <div class="card">
-      <h3>Point &amp; Confirm</h3>
-      <p>Pointing expresses intent. Confirmation authorizes action (pattern can vary by context), so movement is never accidental.</p>
+      <h3>Point &amp; Confirm Interaction</h3>
+      <p>Users express intent by pointing and authorize execution through a simple confirmation.</p>
     </div>
     <div class="card">
-      <h3>Calmer Manual Control</h3>
-      <p>Manual shouldn’t mean micro-steering. The system stabilizes motion and manages speed so users don’t carry the burden.</p>
+      <h3>Assisted Manual Control</h3>
+      <p>The system stabilizes motion and manages speed, reducing the need for constant adjustments.</p>
     </div>
     <div class="card">
-      <h3>Smarter Course Behavior</h3>
-      <p>Following adapts to terrain and obstacles. The goal is predictable behavior that fits real course expectations.</p>
+      <h3>Course-Aware Behavior</h3>
+      <p>Movement adapts to terrain, paths, and typical course situations for predictable results.</p>
     </div>
   </div>
 </section>
 
 <section id="compare" class="alt">
-  <h2>Comparison: Mainstream vs POINGO Base vs POINGO Pro</h2>
+  <h2>Comparison</h2>
   <p class="sub">
-    Most mainstream products do one thing well: button control or tracking-based follow.
-    POINGO improves the experience by stacking three ideas together:
-    <span class="strong">intent (point)</span>, <span class="strong">authorization (confirm)</span>, and
-    <span class="strong">course-aware execution</span>.
+    A clear, side-by-side view of how POINGO Base and Pro extend what mainstream products already offer.
   </p>
 
   <div class="tableWrap">
-    <table aria-label="Comparison table: mainstream vs POINGO Base vs POINGO Pro">
+    <table>
       <thead>
         <tr>
-          <th style="width:22%;">What Matters</th>
-          <th style="width:26%;">Mainstream Products</th>
-          <th style="width:26%;">POINGO™ Base</th>
-          <th style="width:26%;">POINGO™ Pro</th>
+          <th>What Matters</th>
+          <th>Mainstream Products</th>
+          <th>POINGO Base</th>
+          <th>POINGO Pro</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>
-            <div class="tag">Control</div><br/>
-            <span class="strong">How you command it</span>
-          </td>
-          <td>
-            Buttons and modes, or continuous auto-follow.<br/>
-            <span class="mutedSmall">Users either “drive it” or “watch it.”</span>
-          </td>
-          <td>
-            <span class="strong">Point &amp; confirm.</span><br/>
-            <span class="mutedSmall">Clear intent + clear authorization.</span>
-          </td>
-          <td>
-            <span class="strong">Point &amp; confirm, with richer intent.</span><br/>
-            <span class="mutedSmall">Supports higher-tier behaviors with tighter boundaries.</span>
-          </td>
+          <td><span class="tag">Control</span><br/>User interaction</td>
+          <td>Buttons or automatic follow</td>
+          <td>Point and confirm</td>
+          <td>Point and confirm with richer intent options</td>
         </tr>
-
         <tr>
-          <td>
-            <div class="tag">Manual</div><br/>
-            <span class="strong">How manual feels</span>
-          </td>
-          <td>
-            Manual often means micro-steering and constant corrections.
-          </td>
-          <td>
-            Assisted manual control:
-            <ul class="bul">
-              <li>Stabilized motion</li>
-              <li>Speed constraints on slopes</li>
-              <li>Basic obstacle-aware behavior</li>
-            </ul>
-          </td>
-          <td>
-            Higher confidence manual:
-            <ul class="bul">
-              <li>More consistent behavior in complex areas</li>
-              <li>Expanded safety constraints</li>
-              <li>Better handling of crossings and edge cases</li>
-            </ul>
-          </td>
+          <td><span class="tag">Manual Use</span><br/>Stability</td>
+          <td>Direct user control</td>
+          <td>Stabilized motion and speed limits</td>
+          <td>Enhanced stability and handling in complex areas</td>
         </tr>
-
         <tr>
-          <td>
-            <div class="tag">Follow</div><br/>
-            <span class="strong">Tracking vs judgment</span>
-          </td>
-          <td>
-            Follow is typically tracking-first (UWB/vision/GPS).<br/>
-            <span class="mutedSmall">Can feel unpredictable in edge cases.</span>
-          </td>
-          <td>
-            Decision-aware follow:
-            <ul class="bul">
-              <li>Calmer obstacle behavior</li>
-              <li>Better speed adaptation</li>
-              <li>More predictable motion style</li>
-            </ul>
-          </td>
-          <td>
-            Course-optimized follow:
-            <ul class="bul">
-              <li>Terrain-aware path choices</li>
-              <li>More rule-aware constraints</li>
-              <li>Better consistency across varied terrain</li>
-            </ul>
-          </td>
+          <td><span class="tag">Follow</span><br/>Behavior</td>
+          <td>Distance-based tracking</td>
+          <td>Course-aware follow behavior</td>
+          <td>Terrain-optimized, rule-aware follow</td>
         </tr>
-
         <tr>
-          <td>
-            <div class="tag">Course</div><br/>
-            <span class="strong">Real course fit</span>
-          </td>
-          <td>
-            Behavior varies widely by conditions.<br/>
-            <span class="mutedSmall">Course expectations are not always part of the logic.</span>
-          </td>
-          <td>
-            Built for real courses:
-            <ul class="bul">
-              <li>Slopes, paths, crossings</li>
-              <li>Terrain-aware constraints</li>
-              <li>Predictable movement boundaries</li>
-            </ul>
-          </td>
-          <td>
-            Premium-tier course behavior:
-            <ul class="bul">
-              <li>Stronger terrain/mapping layer</li>
-              <li>More precise constraints by area</li>
-              <li>Better tuning per course and scenario</li>
-            </ul>
-          </td>
+          <td><span class="tag">Course Fit</span><br/>Terrain</td>
+          <td>Basic terrain handling</td>
+          <td>Designed for slopes and paths</td>
+          <td>Advanced terrain and mapping awareness</td>
         </tr>
-
         <tr>
-          <td>
-            <div class="tag">Result</div><br/>
-            <span class="strong">What users feel</span>
-          </td>
-          <td>
-            More learning, more monitoring, more surprises.
-          </td>
-          <td>
-            Less learning and less monitoring.<br/>
-            <span class="mutedSmall">Calmer, more predictable behavior.</span>
-          </td>
-          <td>
-            Even less monitoring in complex areas.<br/>
-            <span class="mutedSmall">A clear premium experience for advanced users and courses.</span>
-          </td>
+          <td><span class="tag">Experience</span><br/>User feel</td>
+          <td>Requires attention</td>
+          <td>Calmer and more predictable</td>
+          <td>Premium-tier confidence</td>
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <div class="grid" style="margin-top:18px;">
-    <div class="card">
-      <h3>Why This Works</h3>
-      <p>Golfers express intent. The system executes safely. That’s the simplest way to reduce mental load on a real course.</p>
-    </div>
-    <div class="card">
-      <h3>Low-Risk Path to Premium</h3>
-      <p>Start small: upgrade an existing solid model into a higher-tier version. If it works, it grows into its own series.</p>
-    </div>
-    <div class="card">
-      <h3>Product-Level Upgrade</h3>
-      <p>This only makes sense as a tier upgrade — not a long list of features. From the outside, it can still be your product.</p>
-    </div>
   </div>
 </section>
 
 <section id="roadmap" class="alt">
   <h2>Roadmap</h2>
   <div class="grid">
-    <div class="card"><h3>Prototype</h3><p>Validated the control flow (point &amp; confirm) and stable behavior on real course terrain.</p></div>
-    <div class="card"><h3>Pilot</h3><p>Small run, real courses, real users — learn fast with limited downside.</p></div>
-    <div class="card"><h3>Scale</h3><p>Partner deployments and OEM integration as a premium-tier upgrade path.</p></div>
+    <div class="card"><h3>Prototype</h3><p>Validated natural control and stable behavior on real courses.</p></div>
+    <div class="card"><h3>Pilot</h3><p>Small-scale trials with real users on real terrain.</p></div>
+    <div class="card"><h3>Scale</h3><p>Partner integrations and premium-tier deployments.</p></div>
   </div>
 </section>
 
@@ -475,4 +355,3 @@
 </div>
 </body>
 </html>
-
