@@ -120,7 +120,7 @@
 
     ul{padding-left:18px;color:var(--muted);line-height:1.8}
 
-    /* Comparison table — same visual language: soft borders, rounded corners */
+    /* Existing table language */
     .tableWrap{
       margin-top:18px;
       border:1px solid var(--line);
@@ -170,6 +170,27 @@
       font-size:13px;
       color:var(--muted);
     }
+
+    /* ---- Added minimal compatibility layer for the new comparison block ---- */
+    /* Keep your original style, just map the new classnames into it */
+    .container{max-width:1100px;margin:0 auto;padding:0} /* no visual shift inside .wrap */
+    .section{padding:64px 0}
+    .section-title{font-size:26px;margin-bottom:16px}
+    .section-subtitle{max-width:900px;font-size:16px;line-height:1.65;color:var(--muted)}
+    .table-wrap{margin-top:18px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+    .compare-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
+    .compare-table thead th{
+      text-align:left;font-weight:800;padding:12px 14px;border-bottom:1px solid var(--line);
+      background:linear-gradient(to bottom, #ffffff, #fbfcfd);color:var(--text);
+    }
+    .compare-table tbody td{
+      padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
+      color:var(--muted);line-height:1.55;
+    }
+    .compare-table tbody tr:last-child td{border-bottom:none}
+    .muted{font-size:13px;color:var(--muted)}
+    .fineprint{margin-top:14px;font-size:13px;color:var(--muted);max-width:900px}
+    /* ---------------------------------------------------------------------- */
 
     @media(max-width:900px){
       h1{font-size:34px}
@@ -279,102 +300,155 @@
   </div>
 </section>
 
-<section id="compare" class="alt">
-  <h2>Market Comparison (Simple &amp; Clear)</h2>
-  <p class="sub">
-    The mainstream market already delivers strong follow and remote-control products.
-    This table makes the boundary explicit: what the market reliably delivers today, what POINGO<span class="tm">®</span> Base delivers as a shipping platform,
-    and what POINGO<span class="tm">®</span> Pro unlocks with an additional intelligence layer.
-  </p>
+<!-- Replaced the original #compare section with your new comparison format -->
+<section id="compare" class="alt section">
+  <div class="container">
+    <h2 class="section-title">Market Comparison</h2>
+    <p class="section-subtitle">
+      What mainstream products reliably deliver today vs POINGO<span class="tm">®</span> Base and POINGO<span class="tm">®</span> Pro.
+      This table makes “which side is which” explicit.
+    </p>
 
-  <div class="tableWrap">
-    <table aria-label="Market comparison: mainstream vs POINGO Base vs POINGO Pro">
-      <thead>
-        <tr>
-          <th style="width:24%;">What Matters</th>
-          <th style="width:25%;">Mainstream Market (Today)</th>
-          <th style="width:25%;">POINGO<span class="tm">®</span> Base</th>
-          <th style="width:26%;">POINGO<span class="tm">®</span> Pro</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="tag">Control</div><br/>
-            <span class="strong">How you tell it what to do</span>
-          </td>
-          <td>
-            Buttons, modes, or “follow on/off”.<br/>
-            <span class="mutedSmall">Reliable for basic commands; intent can be ambiguous in edge cases.</span>
-          </td>
-          <td>
-            <span class="strong">Point &amp; confirm.</span><br/>
-            <span class="mutedSmall">The user’s direction/behavior intent is explicit, and execution is authorized.</span>
-          </td>
-          <td>
-            <span class="strong">Intent → safe execution.</span><br/>
-            <span class="mutedSmall">Interprets intent and translates it into constrained motion (path + speed decisions).</span>
-          </td>
-        </tr>
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="col-feature">Capability</th>
+            <th class="col-market">
+              Mainstream market today<br/>
+              <span class="muted">Reliable baseline in real-course conditions</span>
+            </th>
+            <th class="col-base">
+              POINGO<span class="tm">®</span> Base<br/>
+              <span class="muted">Shipping capability</span>
+            </th>
+            <th class="col-pro">
+              POINGO<span class="tm">®</span> Pro<br/>
+              <span class="muted">Base + advanced intelligence layer</span>
+            </th>
+          </tr>
+        </thead>
 
-        <tr>
-          <td>
-            <div class="tag">Manual Mode</div><br/>
-            <span class="strong">How stable “manual” feels</span>
-          </td>
-          <td>
-            Manual often means the user carries the burden (micro-steering).<br/>
-            <span class="mutedSmall">Stability and slope behavior vary by product.</span>
-          </td>
-          <td>
-            <span class="strong">Assisted manual control.</span><br/>
-            <span class="mutedSmall">System manages stability and speed so users don’t have to micro-steer.</span>
-          </td>
-          <td>
-            <span class="strong">Terrain-aware manual assistance.</span><br/>
-            <span class="mutedSmall">Adds slope-based constraints and safer envelopes for more consistent course behavior.</span>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <strong>What it understands</strong><br/>
+              <span class="muted">User intent & control meaning</span>
+            </td>
+            <td>
+              Follow or remote commands. Limited “intent” understanding.
+            </td>
+            <td>
+              <strong>Directional intent</strong>: your pointing direction becomes the cart’s direction with learnable actions.
+            </td>
+            <td>
+              <strong>Intent → safe execution</strong>: converts intent into compliant motion (speed + path decisions).
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <div class="tag">Follow</div><br/>
-            <span class="strong">Tracking vs thinking</span>
-          </td>
-          <td>
-            Tracking-first follow (UWB / vision / GPS variants).<br/>
-            <span class="mutedSmall">Works well in open conditions; performance can drop with obstacles/crossings.</span>
-          </td>
-          <td>
-            <span class="strong">Decision-aware follow.</span><br/>
-            <span class="mutedSmall">Adapts path and speed for calmer, safer behavior in complex areas.</span>
-          </td>
-          <td>
-            <span class="strong">Course-context follow planning.</span><br/>
-            <span class="mutedSmall">Handles more of the “how to follow” decisions under constraints (terrain, boundaries, safe pacing).</span>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <strong>Follow quality</strong><br/>
+              <span class="muted">Smoothness, distance stability</span>
+            </td>
+            <td>
+              Works in open conditions. Performance can drop on turns/slopes/partial signal loss.
+            </td>
+            <td>
+              Stable follow tuned for golf walking rhythm, predictable spacing.
+            </td>
+            <td>
+              Course-aware follow: adapts behavior to terrain and operational context.
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <div class="tag">Real Course</div><br/>
-            <span class="strong">Slopes, paths, crossings</span>
-          </td>
-          <td>
-            Basic terrain handling; course rules are usually not part of control logic.<br/>
-            <span class="mutedSmall">Users often compensate when conditions change.</span>
-          </td>
-          <td>
-            <span class="strong">Course-aware constraints.</span><br/>
-            <span class="mutedSmall">Built for slopes and real course geometry with predictable behavior boundaries.</span>
-          </td>
-          <td>
-            <span class="strong">Rule-aware intelligence layer.</span><br/>
-            <span class="mutedSmall">Adds optional geofencing / restricted-area logic and policy profiles for repeatable deployments.</span>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <td>
+              <strong>Safety behavior</strong><br/>
+              <span class="muted">Stop/slow logic near people & objects</span>
+            </td>
+            <td>
+              Mostly reactive: stop when close. Limited user feedback.
+            </td>
+            <td>
+              Multi-layer safety: controlled speed, stop logic, clear feedback to user.
+            </td>
+            <td>
+              Predictive safety: slow zones, no-go zones, safer turn envelope, risk scoring.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Rule compliance</strong><br/>
+              <span class="muted">Course restrictions & protected areas</span>
+            </td>
+            <td>
+              Generally not rule-aware. Users manually avoid restricted areas.
+            </td>
+            <td>
+              Conservative behavior designed for typical course expectations.
+            </td>
+            <td>
+              Rule engine + course constraints (geofences, restricted slopes/areas, policy profiles).
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Terrain intelligence</strong><br/>
+              <span class="muted">Slope, stability, comfort</span>
+            </td>
+            <td>
+              Limited slope reasoning. Some slowdowns without clear explanation.
+            </td>
+            <td>
+              Slope-informed speed limits for comfort and stability.
+            </td>
+            <td>
+              Path cost planning using terrain: safer grades, smoother speed profile, less turf stress.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>User workload</strong><br/>
+              <span class="muted">How much babysitting is needed</span>
+            </td>
+            <td>
+              Frequent corrections required as conditions change.
+            </td>
+            <td>
+              Low workload: predictable control and “what happens next” clarity.
+            </td>
+            <td>
+              Near hands-off operation inside permitted zones: system handles routing + compliance.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Upgrade path</strong><br/>
+              <span class="muted">Scales beyond a single feature</span>
+            </td>
+            <td>
+              Feature-limited; extensions often require redesign.
+            </td>
+            <td>
+              Software-centric platform; expand capability without redoing the full stack.
+            </td>
+            <td>
+              Full roadmap layer: mapping, diagnostics, fleet ops, course integration.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="fineprint">
+      “Mainstream market today” describes typical consumer follow/remote products under real-course conditions.
+      POINGO<span class="tm">®</span> is a registered trademark.
+    </p>
   </div>
 
   <div class="grid" style="margin-top:18px;">
